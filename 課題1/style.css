@@ -29,7 +29,7 @@ li{
     clear:both;
 }
 
-#bg {
+.bg {
   margin:0;
   padding:0;
   width: 100%;
@@ -52,6 +52,7 @@ li{
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+
 }
 
 header{
@@ -91,9 +92,13 @@ h1{
 
 .top_menu li a{
     color:#fff;
+    transition: background-color 1s;/* 1秒かけて背景色をアニメーションさせる */
+    display:block;
+    padding:10px;
 }
 .top_menu li a:hover{
-  color:#ff0;
+  color:#ff0;     
+  background-color: #999;/* マウスオーバー時に背景色をグレーに変更 */
 }
 
 
@@ -108,12 +113,20 @@ h1{
   padding: 3%;
   text-align:center;
   line-height:180%;
+  animation: fadein 3s linear 0s 1;    
 }
+
+@keyframes fadein{
+0% { display:none;color:#000;opacity: 0; }
+100% {  display:block;color:#fff;opacity: 1;}
+}
+
 .about_box h2{
   margin:0;
   display:inline-block;
   padding: 3%;
 }
+
 
 .photo {
   width:80%;
@@ -186,15 +199,8 @@ address ul{
 address li{
   display:inline-block;
   float:left;
-  width:44%;
-  margin:0;
-  padding:4% 0%;
-  border:1px solid #333;
- 
-   border-radius: 3px; 
-   -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
-  -moz-border-radius: 3px;   /* Firefox用 */  
 }
+
 address li:nth-child(1){
   margin:0 5% 0 0;
 }
@@ -202,6 +208,25 @@ address li:nth-child(2){
   margin:0 0 0 5%;
 }
 
+.contact .mail a,
+.contact .form a{
+  width:200px;
+  margin:0;
+  padding:4% 0%;
+  border:1px solid #333;
+   display:block;
+   border-radius: 3px; 
+   -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+  -moz-border-radius: 3px;   /* Firefox用 */  
+
+    transition: background-color 0.5s;
+}
+
+.contact .mail a:hover,
+.contact .form a:hover{
+    background:#333;
+    color:#fff;
+}
 
 footer{
   background-color: rgba( 0, 0, 0, 0.8 );
@@ -216,4 +241,11 @@ footer{
 footer h2{
   padding:0 0 1% ;
 
+}
+
+.check{
+background: #ccc;
+}
+.checked{
+background: #ff0;
 }
