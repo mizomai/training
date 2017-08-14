@@ -144,15 +144,24 @@ h1{
   margin:0 0 0 0;
 }
 
+/*èâä˙*/
+.photo li{
+ display:none;
+}
 .photo li img{
   width:100%;
- opacity: 0.5;  
 }
 
-.photo li.check img{
- opacity: 1;  
+
+/*ï\é¶*/
+.photo li.active{
+ display:block;
 }
 
+@keyframes fadein{
+0% { display:none;color:#000;opacity: 0; }
+100% {  display:block;color:#fff;opacity: 1;}
+}
 
 
 .more{

@@ -1,18 +1,25 @@
 $(function(){
-    $(".photo_btn1").on("click", function(){
-      $(".photo_img1").toggleClass("check");
+    $("#all").on("click", function(){
+	$(".photoBox").removeClass("active");//è¡Ç∑
+	$(".photoBox").addClass("active");
     });  
-    $(".photo_btn2").on("click", function(){
-      $(".photo_img2").toggleClass("check");
+
+
+    $("#action").on("click", function(){
+	$(".photoBox").removeClass("active");//è¡Ç∑
+	$(".action").addClass("active");
     });
-    $(".photo_btn3").on("click", function(){
-      $(".photo_img3").toggleClass("check");
+    $("#sf").on("click", function(){
+	$(".photoBox").removeClass("active");//è¡Ç∑
+	$(".sf").addClass("active");
     });
-    $(".photo_btn4").on("click", function(){
-      $(".photo_img4").toggleClass("check");
+    $("#romance").on("click", function(){
+	$(".photoBox").removeClass("active");//è¡Ç∑
+	$(".romance").addClass("active");
     });
-    $(".photo_btn5").on("click", function(){
-      $(".photo_img5").toggleClass("check");
+    $("#comedy").on("click", function(){
+	$(".photoBox").removeClass("active");//è¡Ç∑
+	$(".comedy").addClass("active");
     });
     
 }); 
