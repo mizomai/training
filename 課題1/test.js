@@ -1,25 +1,9 @@
 $(function(){
-    $("#all").on("click", function(){
-	$(".photoBox").removeClass("active");//Á‚·
-	$(".photoBox").addClass("active");
+    //ã‚¯ãƒªãƒƒã‚¯ã§ã‚¤ãƒ™ãƒ³ãƒˆå®Ÿè¡Œ
+    $(".movie_btn_list li").on("click", function(){  
+     var idname = $(this).attr("id"); //idå–å¾—          
+	$(".movie_img").removeClass("active");//é …ç›®éè¡¨ç¤ºã«ã™ã‚‹
+	$("."+idname).addClass("active");//é …ç›®ã‚’è¡¨ç¤ºã™ã‚‹
     });  
-
-
-    $("#action").on("click", function(){
-	$(".photoBox").removeClass("active");//Á‚·
-	$(".action").addClass("active");
-    });
-    $("#sf").on("click", function(){
-	$(".photoBox").removeClass("active");//Á‚·
-	$(".sf").addClass("active");
-    });
-    $("#romance").on("click", function(){
-	$(".photoBox").removeClass("active");//Á‚·
-	$(".romance").addClass("active");
-    });
-    $("#comedy").on("click", function(){
-	$(".photoBox").removeClass("active");//Á‚·
-	$(".comedy").addClass("active");
-    });
-    
+  
 }); 

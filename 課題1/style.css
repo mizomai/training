@@ -29,7 +29,7 @@ li{
     clear:both;
 }
 
-.bg {
+.top_bg {
   margin:0;
   padding:0;
   width: 100%;
@@ -121,46 +121,93 @@ h1{
 100% {  display:block;color:#fff;opacity: 1;}
 }
 
-.about_box h2{
+.about_title{
   margin:0;
   display:inline-block;
   padding: 3%;
+  text-align:center;
+  width:100%;   
+}
+.about_title::before,.about_title::after{
+  content:"";
+  display:inline-block;
+  width:30%;
+  height:1px;
+  margin:0 1rem;
+  background-color: #fff;
+  vertical-align: middle;
 }
 
 
-.photo {
+/*カテゴリーメニューボタン*/
+.movie_btn_list ul{
+  width:80%;  
+  margin:5% 10%;
+  padding:0;
+  border-bottom:2px solid #333;
+}
+
+.movie_category li  {
+  display:block;
+  width:20%;
+  height:50px;
+  text-align:center;
+  float:left;
+  color:#666;
+}
+.movie_btn_list li a{
+      display:block;
+      height: 30px;
+      padding-top: 10%;
+}
+.movie_btn_list li a:hover{
+  background:#666;
+  color:#fff;
+}
+
+/* カテゴリーのimg*/
+.movie_imgbox {
   width:80%;
+  height:250px;     
   margin:5% 10% 0;
   clear:both;
 }
 
-.photo li {
+.movie_imgbox li {
   display:inline-block;
   float:left;
   width:30%;
   margin:0 5% 5% 0;
 }
-.photo li:nth-child(3n){
+.movie_imgbox li:nth-child(3n){
   margin:0 0 0 0;
 }
 
 /*初期*/
-.photo li{
+.movie_imgbox li{
  display:none;
 }
-.photo li img{
+.movie_imgbox img{
   width:100%;
 }
 
 
 /*表示*/
-.photo li.active{
+.movie_imgbox li.active{
  display:block;
+ animation: movie_active 0.5s ease 0s 0.5 alternate none running;
 }
 
-@keyframes fadein{
-0% { display:none;color:#000;opacity: 0; }
-100% {  display:block;color:#fff;opacity: 1;}
+@keyframes movie_active {
+  0% {
+    transform: scale(1.2,1.2);/*拡大する*/
+      opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);/*等倍に*/
+    opacity: 1;
+  }
 }
 
 
@@ -170,72 +217,46 @@ h1{
   margin:-3% 10% 0 10%;
 }
 
-
-
-nav ul{
-  width:80%;
-  margin:5% 10%;
-  padding:0;
-  border-bottom:2px solid #333;
-}
-
-nav li  {
-  display:block;
-  width:20%;
-  text-align:center;
-  float:left;
-  padding:2% 0;
-  color:#666;
-}
-
-nav li hover{
-  background:#666;
-  color:#fff;
-}
-
-
-
-address{
+.contact{
   width:60%;
   margin:5% 20%;
   text-align:center;
 }
-address h2{
+.contact h2{
   background:#fff;
   display:inline-block;
   padding:3%;
 }
-address p{
+.contact p{
   margin:2% 0;
 }
-address ul{
-  width:60%;
+.contact ul{
   margin:8% auto 0;
 }
-address li{
-  display:inline-block;
+.contact li{
+  display:block;
   float:left;
+  width:45%;
 }
 
-address li:nth-child(1){
+.contact li:nth-child(1){
   margin:0 5% 0 0;
 }
-address li:nth-child(2){
+.contact li:nth-child(2){
   margin:0 0 0 5%;
 }
 
 .contact .mail a,
 .contact .form a{
-  width:200px;
   margin:0;
   padding:4% 0%;
   border:1px solid #333;
-   display:block;
-   border-radius: 3px; 
-   -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+  display:block;
+  border-radius: 3px; 
+  -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
   -moz-border-radius: 3px;   /* Firefox用 */  
 
-    transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .contact .mail a:hover,
@@ -254,8 +275,17 @@ footer{
   color:#fff;
 }
 
-footer h2{
-  padding:0 0 1% ;
 
+.fotter_title{
+  text-align: center;
+  padding:0 0 1% ;    
 }
-
+.fotter_title::before,.fotter_title::after{
+  content:"";
+  display:inline-block;
+  width:140px;
+  height:1px;
+  margin:0 3rem;
+  background-color: #333;
+  vertical-align: middle;
+}

@@ -6,12 +6,10 @@
 <link rel="stylesheet" href="style.css">    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="test.js"></script>
- 
-    
 </head>
 
 <body>
-<div class="bg">
+<div class="top_bg">
     <header>
         <h1><img src="logo.png" alt="Films"></h1>
         <ul class="top_menu">
@@ -21,7 +19,7 @@
     </header>
     <section>
         <div class="about_box clearfix">
-        <h2>About</h2>
+        <h2 class="about_title" >About</h2>
         <p class="clearfix">Filmsは年間約300本の映画を視聴する運営者が<br />
         おすすめ映画を皆様にご紹介させていただくための<br />
         Webサイトです</p>
@@ -29,31 +27,31 @@
     </section>
 </div>
 
-<div class="photo_btn_list">
-<nav>
-<ul class="clearfix">
-<li id="all">All</li>
-<li id="action">ACTION</li>
-<li id="sf">SF</li>
-<li id="romance">ROMANCE</li>
-<li id="comedy">COMEDY</li>
-</ul>
-</nav>
+<div class="movie_category">
+    <nav class="movie_btn_list">
+    <ul class="clearfix">
+        <li id="all"><a>All</a></li>
+        <li id="action"><a>ACTION</a></li>
+        <li id="sf"><a>SF</a></li>
+        <li id="romance"><a>ROMANCE</a></li>
+        <li id="comedy"><a>COMEDY</a></li>
+    </ul>
+    </nav>
 
-<ul class="photo clearfix">
-<li class="photoBox all active"><a href="#"><img src="film1.jpg" alt="film1"></a></li>
-<li class="photoBox action active"><a href="#"><img src="film2.jpg" alt="film2"></a></li>
-<li class="photoBox sf active"><a href="#"><img src="film3.jpg" alt="film3"></a></li>
-<li class="photoBox romance active"><a href="#"><img src="film4.jpg" alt="film4"></a></li>
-<li class="photoBox comedy active"><a href="#"><img src="film5.jpg" alt="film5"></a></li>
-<li class="photoBox other active"><a href="#"><img src="film6.jpg" alt="film5"></a></li>
-</ul>
-<div class="more clearfix"><a href="#">more</a></div>
+    <ul class="movie_imgbox clearfix">
+        <li class="movie_img all"><a href="#"><img src="film1.jpg" alt="film1"></a></li>
+        <li class="movie_img action"><a href="#"><img src="film2.jpg" alt="film2"></a></li>
+        <li class="movie_img sf"><a href="#"><img src="film3.jpg" alt="film3"></a></li>
+        <li class="movie_img romance"><a href="#"><img src="film4.jpg" alt="film4"></a></li>
+        <li class="movie_img comedy"><a href="#"><img src="film5.jpg" alt="film5"></a></li>
+        <li class="movie_img other"><a href="#"><img src="film6.jpg" alt="film5"></a></li>
+    </ul>
+    <div class="more clearfix"><a href="#">more</a></div>
 </div>    
 
 <div class="contact">
     <address> 
-        <h2>Contact</h2>
+        <h2 class="fotter_title">Contact</h2>
         <p>サイトに関するお問合わせやご要望はこちらから</p>
         <ul class="clearfix">
             <li class="mail"><a href="#">Mail</a></li>
@@ -63,8 +61,8 @@
 </div>
 
 <footer>
-<h2><img src="logo.png" alt="Films"></h2>
-<small>Copuright&copy;2017 Films All Rights Reserved.</small>
+    <h2><img src="logo.png" alt="Films"></h2>
+    <small>Copuright&copy;2017 Films All Rights Reserved.</small>
 </footer>
 
 </body>
