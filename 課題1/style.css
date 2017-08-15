@@ -96,7 +96,7 @@ h1{
     display:block;
     padding:10px;
 }
-.top_menu li a:hover{
+.top_menu li{
   color:#ff0;     
   background-color: #999;/* マウスオーバー時に背景色をグレーに変更 */
 }
@@ -155,12 +155,12 @@ h1{
   float:left;
   color:#666;
 }
-.movie_btn_list li a{
+.movie_btn_list li {
       display:block;
       height: 30px;
       padding-top: 10%;
 }
-.movie_btn_list li a:hover{
+.movie_btn_list li.btn_on{
   background:#666;
   color:#fff;
 }
