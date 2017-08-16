@@ -3,7 +3,14 @@ $(function(){
     $(".movie_btn_list li").on("click", function(){  
      var idname = $(this).attr("id"); //id取得          
 	$(".movie_img").removeClass("active");//項目非表示にする
-	$("."+idname).addClass("active");//項目を表示する
+        
+        
+    // if文で条件を比較
+　　if (idname == 'all') {
+　  $(".movie_img").addClass("active");//allの時
+    } else {  
+ 	$("."+idname).addClass("active");//All以外の時
+　　}    
     });  
   
 }); 
