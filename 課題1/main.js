@@ -4,16 +4,13 @@ $(function(){
      var idname = $(this).attr("id"); //id取得          
 	$(".movie_img").removeClass("active");//項目非表示にする
         
-        
-    // if文で条件を比較
-　　if (idname == 'all') {
-　  $(".movie_img").addClass("active");//allの時
-    } else {  
- 	$("."+idname).addClass("active");//All以外の時
-　　}    
+ 	$("."+idname).addClass("active");//項目表示する
+ 
     });  
   
 }); 
+
+  
 
 //*********カテゴリボタンのhover追加*********
 $(function(){
